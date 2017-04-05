@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="bower_components/angular/angular.min.js"></script>
+<div ng-app="app1" ng-controller="ctrl_one">
+    <h1 style="color:red" ng-bind="var_one">
+    </h1>
+</div>
+
+<div  id="d2" ng-controller="ctrl_two">
+    <h1 style="color:green" ng-bind="var_two">
+    </h1>
+</div>
+
+<script>
+    angular.module("app1",[]).controller("ctrl_one",function ($scope) {
+
+        $scope.var_one="i am from auto bootstrap";
+
+    });
+
+    angular.module("app2",[]).controller("ctrl_two",function ($scope) {
+
+        $scope.var_two="i am from manual bootstrap";
+
+    });
+
+    angular.bootstrap(d2,["app2"]);
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>

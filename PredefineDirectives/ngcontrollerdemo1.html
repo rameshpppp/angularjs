@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<script src="bower_components/angular/angular.min.js"></script>
+<label style="color:blue" ng-bind="var_one"></label>
+    <h1 style="color:red" ng-controller="ctrl" ng-bind="var_one"></h1>
+
+<script>
+    var app = angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    ctrl.$inject=["$rootScope"];
+    function ctrl($rootScope) {
+        $rootScope.var_one="Angularjs";
+
+    }
+</script>
+
+</html>

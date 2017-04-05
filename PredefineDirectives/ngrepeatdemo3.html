@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app lang="en" ng-controller="ctrl">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<script src="bower_components/angular/angular.min.js"></script>
+<table class="table table-responsive">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>marks</th>
+    </tr>
+    <tr ng-repeat="x in data">
+        <td>{{x.id}}</td>
+        <td>{{x.Name}}</td>
+        <td>{{x.marks}}</td>
+    </tr>
+</table>
+<script>
+    var app=angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    ctrl.$inject=["$scope"];
+    function ctrl($scope) {
+        $scope.data=[{"id":1,Name:"ramesh","Marks":300},
+            {"id":2,Name:"raju","Marks":500},
+            {"id":3,Name:"varma","Marks":850}];
+
+    }
+</script>
+
+</html>

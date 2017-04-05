@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl" lang="en">
+<script src="bower_components/angular/angular.min.js"></script>
+<h1 ng-repeat="a in data">
+    {{a}}
+</h1>
+<script>
+  var app = angular.module("app",[]);
+  app.controller("ctrl",ctrl);
+  ctrl.$inject=["$scope"];
+  function ctrl($scope) {
+      $scope.data=["hello_1",
+                   "hello_2",
+                   "hello_3"];
+
+  }
+</script>
+
+</html>
