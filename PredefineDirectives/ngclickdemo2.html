@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<script src="bower_components/angular/angular.min.js"></script>
+<div ng-controller="ctrl">
+    <input type="text" ng-model="uname">
+    <br>
+    <br>
+    <input type="text" ng-model="upwd">
+    <br>
+    <br>
+    <button ng-click="login({u_name:uname,U_pwd:upwd})"> Login</button>
+</div>
+<script>
+  var app1=angular.module("app",[]);
+  app1.controller("ctrl",ctrl);
+  ctrl.$inject=["$scope"];
+  function ctrl($scope) {
+     $scope.login=function(data) {
+         alert(data.u_name+"......"+data.U_pwd);
+
+     }
+
+  }
+</script>
+
+
+
+</html>
